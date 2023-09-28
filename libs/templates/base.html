@@ -1,0 +1,25 @@
+<html style="background-color : #C4C4C4">
+  <head>
+    <title style="background-color : #8C8C8C">Raumplan</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+  </head>
+  <body style="background-color : #C4C4C4">
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/static/css/dataTables.bootstrap5.css">
+    <script type="text/javascript" charset="utf8" src="/static/js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="/static/js/jquery.dataTables.js"></script>
+    <script type="text/javascript" charset="utf8" src="/static/js/dataTables.bootstrap5.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    
+      
+    
+    
+    <div class="container">
+      <h1 style="margin-bottom:20px; margin-top:10px">{{ title }}<img src="ATIW.png" style="width:140px; float:right"></h1>
+      <hr style="margin: 10px;">
+      {% block content %}{% endblock %}
+    </div>
+    {% block scripts %}{% endblock %}
+
+  </body>
+</html>

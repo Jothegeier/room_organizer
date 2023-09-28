@@ -1,0 +1,99 @@
+{
+    "credentials": {
+        "user": "api-test",
+        "pwd": "WebUntis-API2023",
+        "school": "ATIW-gGmbH",
+        "useragent": "Test@test.de"
+    },
+    "url": "https://nessa.webuntis.com",
+    "request_time": 300,
+    "server_url": "localhost",
+    "server_port": 8088,
+    "website_refresh_time": 60,
+    "lesson_switch_difference": -5,
+    "lesson_length": 45,
+    "lesson_times":{
+        "1": 730,
+        "2": 815,
+        "3": 925,
+        "4": 1010,
+        "5": 1115,
+        "6": 1200,
+        "7": 1330,
+        "8": 1415
+    },
+    "rooms":[
+        {
+            "name":"Ahorn 1",
+            "ebene":"Sport"
+        },
+        {
+            "name":"Ahorn 2",
+            "ebene":"Sport"
+        },
+        {
+            "name":"Aula",
+            "ebene":"4"
+        },
+        {
+            "name":"C-Lab1",
+            "ebene":"3"
+        },
+        {
+            "name":"C-Lab2",
+            "ebene":"4"
+        },
+        {
+            "name":"E-Lab",
+            "ebene":"4"
+        },
+        {
+            "name":"K-L01",
+            "ebene":"4"
+        },
+        {
+            "name":"K-L02",
+            "ebene":"4"
+        },
+        {
+            "name":"Lab01",
+            "ebene":"3"
+        },
+        {
+            "name":"Lab02",
+            "ebene":"3"
+        },
+        {
+            "name":"Lab03",
+            "ebene":"3"
+        },
+        {
+            "name":"Lab04",
+            "ebene":"3"
+        },
+        {
+            "name":"Lab05",
+            "ebene":"4"
+        },
+        {
+            "name":"M-Lab",
+            "ebene":"4"
+        },
+        {
+            "name":"NL-1",
+            "ebene":"3"
+        },
+        {
+            "name":"NL-2",
+            "ebene":"3"
+        },
+        {
+            "name":"NL-3",
+            "ebene":"4"
+        },
+        {
+            "name":"R-Halle",
+            "ebene":"Sport"
+        }
+    ]
+}
