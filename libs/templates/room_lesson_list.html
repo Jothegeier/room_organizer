@@ -68,6 +68,11 @@ input:focus + label {
     var table
     $(document).ready(
       function () {
+        var params = new URLSearchParams(location.search);
+        var set_floor = params.get("buttons");
+        if(set_floor == "false"){
+          document.getElementById("container_filter").style.display = "None";
+        }
         var orderers = [];
         table = $('#data').DataTable({
           ajax: '/raumstundenplan/data',
@@ -109,45 +114,45 @@ input:focus + label {
 
     function filter_table() {
       try{
-var params = new URLSearchParams(location.search);
-var set_floor = params.get("floor");
-var set_hour = params.get("hour");
-var set_teacher = params.get("teacher");
-var set_room = params.get("room");
-var set_subject = params.get("subject");
-var set_class = params.get("class");
-var searchbar = params.get("searchbar");
-if(set_floor != null){
-document.getElementById("floor_" + set_floor).click();
-}
-if(set_hour != null){
-if(set_hour == "auto"){
-// Get the current lesson
-var current_lesson = '{{ current_lesson }}';
-console.log(current_lesson)
-document.getElementById("lesson_" + current_lesson).click();
-} else {
-document.getElementById("lesson_" + set_hour).click();
-}
-}
-if(set_teacher != null){
-table.columns( 2 ).search(set_teacher).draw();
-}
-if(set_subject != null){
-table.columns( 3 ).search(set_subject).draw();
-}
-if(set_class != null){
-table.columns( 1 ).search(set_class).draw();
-}
-if(set_room != null){
-table.columns( 0 ).search(set_room).draw();
-}
-if(searchbar != null){
-document.getElementsByClassName("dataTables_filter")[0].setAttribute("style", "display:block;");
-}
-} catch (e) {
-console.log("No Data for filtering!")
-}
+        var params = new URLSearchParams(location.search);
+        var set_floor = params.get("floor");
+        var set_hour = params.get("hour");
+        var set_teacher = params.get("teacher");
+        var set_room = params.get("room");
+        var set_subject = params.get("subject");
+        var set_class = params.get("class");
+        var searchbar = params.get("searchbar");
+        if(set_floor != null){
+        document.getElementById("floor_" + set_floor).click();
+        }
+        if(set_hour != null){
+        if(set_hour == "auto"){
+        // Get the current lesson
+        var current_lesson = '{{ current_lesson }}';
+        console.log(current_lesson)
+        document.getElementById("lesson_" + current_lesson).click();
+        } else {
+        document.getElementById("lesson_" + set_hour).click();
+        }
+        }
+        if(set_teacher != null){
+        table.columns( 2 ).search(set_teacher).draw();
+        }
+        if(set_subject != null){
+        table.columns( 3 ).search(set_subject).draw();
+        }
+        if(set_class != null){
+        table.columns( 1 ).search(set_class).draw();
+        }
+        if(set_room != null){
+        table.columns( 0 ).search(set_room).draw();
+        }
+        if(searchbar != null){
+        document.getElementsByClassName("dataTables_filter")[0].setAttribute("style", "display:block;");
+        }
+        } catch (e) {
+        console.log("No Data for filtering!")
+        }
     }
 
     

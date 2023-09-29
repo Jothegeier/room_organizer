@@ -37,22 +37,27 @@ The room ordered to each
 ## Website Options
 
 URL arguments:
-- "hour"
--> "auto"
--> number of lesson (ex. "hour=4")
-- "floor"
--> number of the floor (ex. "floor=3")
-- "teacher"
--> nickname of teacher (ex. "teacher=GEM")
-- "subject"
--> name of subject (ex. "subject=SWD")
-- "room"
--> roomname (ex. "room=R324")
-- "class"
--> classname (ex. "class=FS215")
+
+    - "hour"
+    -> "auto"
+    -> number of lesson (ex. "hour=4")
+    - "floor"
+    -> number of the floor (ex. "floor=3")
+    - "teacher"
+    -> nickname of teacher (ex. "teacher=GEM")
+    - "subject"
+    -> name of subject (ex. "subject=SWD")
+    - "room"
+    -> roomname (ex. "room=R324")
+    - "class"
+    -> classname (ex. "class=FS215")
+    - "buttons"
+    -> disable left button options with buttons=false
+    - "searchbar"
+    -> enable searchbar of the table with searchbar=true
 
 Full Example:
-http://localhost:8088/raumstundenplan?hour=auto&class=FS215&subject=SWD&teacher=GEM&room=R324&floor=3
+http://localhost:8088/raumstundenplan?hour=auto&class=FS215&subject=SWD&teacher=GEM&room=R324&floor=3&buttons=false&searchbar=true
 
 Other Options:
 - Manual choose floor and lesson
